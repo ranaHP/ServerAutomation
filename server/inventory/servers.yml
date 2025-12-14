@@ -1,0 +1,11 @@
+groups:
+  UAT:
+    - name: DFN-WebServer-1-dvh-fd1
+      host: 172.27.0.93
+      port: 22
+      user: directfn
+  PROD:
+    - name: DFN-ProdWeb-1
+      host: 10.10.10.10
+      port: 22
+      user: directfn
