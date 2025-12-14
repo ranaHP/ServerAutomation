@@ -11,7 +11,7 @@ releasepilot/
 
 ## Prerequisites
 - Node.js 18+
-- npm
+- pnpm (preferred) or npm
 - OpenSSH private key accessible to the backend host
 
 ## Setup
@@ -24,25 +24,22 @@ releasepilot/
 3. Configure inventory in `server/inventory/servers.yml` with approved UAT/PROD hosts.
 
 ## Install dependencies
-Install dependencies per package using npm (preferred for this repo):
-
 ```bash
-cd server && npm install
-cd ../web && npm install
+pnpm install --filter ./server --filter ./web
 ```
 
 ## Running locally
 In two shells:
 ```bash
-cd server && npm run dev
-cd web && npm run dev
+cd server && pnpm dev
+cd web && pnpm dev
 ```
 Backend listens on port 4000 by default; frontend on 5173.
 
 ## Production build
 ```bash
-cd server && npm run start
-cd web && npm run build
+cd server && pnpm start
+cd web && pnpm build
 ```
 Serve `web/dist` behind your preferred web server and point it at the running API.
 
